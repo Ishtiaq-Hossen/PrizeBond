@@ -1,0 +1,214 @@
+#include<bits/stdc++.h>
+using namespace std;
+int ownNum;
+void displaybar()
+{
+        printf("============================================\n");
+        printf("|---------For Checking 1st Price Type 1----|\n");
+        printf("|---------For Checking 2nd Price Type 2----|\n");
+        printf("|---------For Checking 3rd Price Type 3----|\n");
+        printf("|---------For Checking 4th Price Type 4----|\n");
+        printf("|---------For Checking 5th Price Type 5----|\n");
+        printf("|---------For Exit Type 0------------------|\n");
+        printf("============================================\n\n\n");
+}
+void own_input(string *&own)
+{
+    int t=0;
+    string temp;
+
+    //ifstream myfile("/media/ishtiaq/New Volume/Price bond/own.txt");
+    ifstream myfile("files/own.txt");
+
+    if(myfile.is_open()){
+        while(myfile>>temp){
+            own[t]=temp;
+            t++;
+        }
+        myfile.close();
+    }
+    else{
+        cout<<"it's not open"<<endl;
+    }
+    printf("Your prizebond list: ");
+    for(int i=0;i<ownNum-1;i++){  
+
+       cout<<own[i]<<",";
+    }
+    cout<<own[ownNum-1]<<endl;
+}
+void process(int num,string*& own)
+{
+    
+    bool count;
+    int k=0;
+    
+    if(num==1){
+        count=true;
+        //---number of times you want to check like 40/80 etc
+        printf("Number of pricebond you want to check: ");
+        cin>>k;
+        string *price=new string[k];
+        ifstream cin("files/input1.txt");
+            for(int i=0;i<k;i++){
+                
+                cin>>price[i];
+                
+            }
+            
+            for(int i=0;i<k;i++){
+                
+                for(int j=0;j<ownNum;j++){
+                    if(price[i]==own[j]){
+                        cout<<"Congrats you got 1st prize \nPrice bond number: "<<price[i]<<endl;
+                        count=false;
+                        
+                    }            
+                }
+            }    
+            if(count==true){
+                cout<<"There is no match"<<endl;
+            }         
+            delete[] price;
+    }
+    else if(num==2){
+        count=true;
+        printf("Number of pricebond you want to check: ");
+        cin>>k;
+        string *price=new string[k];
+        ifstream cin("files/input2.txt");
+            for(int i=0;i<k;i++){
+                
+                cin>>price[i];
+                
+            }
+            
+            for(int i=0;i<k;i++){
+                
+                for(int j=0;j<ownNum;j++){
+                    if(price[i]==own[j]){
+                        cout<<"Congrats you got 2nd prize \nPrice bond number: "<<price[i]<<endl;
+                        count=false;
+                        
+                    }            
+                }
+            }  
+            if(count==true){
+                cout<<"There is no match"<<endl;
+            } 
+            delete[] price;     
+    }
+    else if(num==3){
+        count=true;
+        printf("Number of pricebond you want to check: ");
+        cin>>k;
+        string *price=new string[k];
+        ifstream cin("files/input3.txt");
+            for(int i=0;i<k;i++){
+                
+                cin>>price[i];
+                
+            }
+            
+            for(int i=0;i<k;i++){
+                
+                for(int j=0;j<ownNum;j++){
+                    if(price[i]==own[j]){
+                        cout<<"Congrats you got 3rd prize \nPrice bond number: "<<price[i]<<endl;
+                        count=false;
+                        
+                    }            
+                }
+            }   
+            if(count==true){
+                cout<<"There is no match"<<endl;
+            }  
+            delete[] price;  
+    }
+    else if(num==4){
+        count=true;
+        printf("Number of pricebond you want to check: ");
+        cin>>k;
+        string *price=new string[k];
+        ifstream cin("files/input4.txt");
+            for(int i=0;i<k;i++){
+                
+                cin>>price[i];
+                
+            }
+            
+            for(int i=0;i<k;i++){
+                
+                for(int j=0;j<ownNum;j++){
+                    if(price[i]==own[j]){
+                        cout<<"Congrats you got 4th prize \nPrice bond number: "<<price[i]<<endl;
+                        count=false;
+                        
+                    }            
+                }
+            }
+            if(count==true){
+                cout<<"There is no match"<<endl;
+            }  
+            delete[] price;   
+            
+    }
+    else if(num==5){
+        count=true;
+        printf("Number of pricebond you want to check: ");
+        cin>>k;
+        string *price=new string[k];
+        ifstream cin("files/input5.txt");
+            for(int i=0;i<k;i++){
+                
+                cin>>price[i];
+                
+            }
+            
+            for(int i=0;i<k;i++){
+                
+                for(int j=0;j<ownNum;j++){
+                    if(price[i]==own[j]){
+                        cout<<"Congrats you got 5th prize \nPrice bond number: "<<price[i]<<endl;
+                        count=false;
+                        
+                    }            
+                }
+            } 
+            if(count==true){
+                cout<<"There is no match"<<endl;
+            }    
+            delete[] price; 
+    }
+    else{
+        cout<<"-----------404 error -------------\n-----------Type correct number-----------\n";
+    }
+        
+}
+int main()
+{
+    
+    int num=0;
+    printf("Number of pricebond you have: ");
+    //cin>>ownNum;
+    scanf("%d",&ownNum);
+    string* own=new string[ownNum];
+
+    own_input(own);//--it will take input of my own prizebond from own.txt
+    
+    while(1){
+        displaybar();
+
+        //----for how many times I'm going to check----/
+        cin>>num;
+        if(num==0){ 
+            printf("Thanks for using our services :)\n");
+            break;
+        }
+        //---for sequencial prize winning--/
+        process(num,own);
+        
+    }   
+    delete[] own;
+    return 0;
+}
