@@ -1,14 +1,18 @@
+
+//          system("cls");   --> it will clear the screen
 #include<bits/stdc++.h>
 using namespace std;
 int ownNum;
 void displaybar()
 {
+    
         printf("============================================\n");
         printf("|---------For Checking 1st Price Type 1----|\n");
         printf("|---------For Checking 2nd Price Type 2----|\n");
         printf("|---------For Checking 3rd Price Type 3----|\n");
         printf("|---------For Checking 4th Price Type 4----|\n");
         printf("|---------For Checking 5th Price Type 5----|\n");
+        printf("|---------For Going to main menu Type 6----|\n");
         printf("|---------For Exit Type 0------------------|\n");
         printf("============================================\n\n\n");
 }
@@ -17,8 +21,8 @@ void own_input(string *&own)
     int t=0;
     string temp;
 
-    //ifstream myfile("/media/ishtiaq/New Volume/Price bond/own.txt");
-    ifstream myfile("files/own.txt");
+    
+    ifstream myfile("E:/Prizebond/files/own.txt");
 
     if(myfile.is_open()){
         while(myfile>>temp){
@@ -39,17 +43,18 @@ void own_input(string *&own)
 }
 void process(int num,string*& own)
 {
-    
+    printf("\n\n\n\t\t\t\t\t====Welcome to the console base application=====\n\n\n\n\n");
     bool count;
     int k=0;
     
     if(num==1){
         count=true;
         //---number of times you want to check like 40/80 etc
-        printf("Number of pricebond you want to check: ");
+        
+        printf("You are checking for 1st prize\nNumber of pricebond you want to check: ");
         cin>>k;
         string *price=new string[k];
-        ifstream cin("files/input1.txt");
+        ifstream cin("E:/Prizebond/files/input1.txt");
             for(int i=0;i<k;i++){
                 
                 cin>>price[i];
@@ -73,10 +78,10 @@ void process(int num,string*& own)
     }
     else if(num==2){
         count=true;
-        printf("Number of pricebond you want to check: ");
+        printf("You are checking for 2nd prize\nNumber of pricebond you want to check: ");
         cin>>k;
         string *price=new string[k];
-        ifstream cin("files/input2.txt");
+        ifstream cin("E:/Prizebond/files/input2.txt");
             for(int i=0;i<k;i++){
                 
                 cin>>price[i];
@@ -100,10 +105,10 @@ void process(int num,string*& own)
     }
     else if(num==3){
         count=true;
-        printf("Number of pricebond you want to check: ");
+        printf("You are checking for 3rd prize\nNumber of pricebond you want to check: ");
         cin>>k;
         string *price=new string[k];
-        ifstream cin("files/input3.txt");
+        ifstream cin("E:/Prizebond/files/input3.txt");
             for(int i=0;i<k;i++){
                 
                 cin>>price[i];
@@ -127,10 +132,10 @@ void process(int num,string*& own)
     }
     else if(num==4){
         count=true;
-        printf("Number of pricebond you want to check: ");
+        printf("You are checking for 4th prize\nNumber of pricebond you want to check: ");
         cin>>k;
         string *price=new string[k];
-        ifstream cin("files/input4.txt");
+        ifstream cin("E:/Prizebond/files/input4.txt");
             for(int i=0;i<k;i++){
                 
                 cin>>price[i];
@@ -155,10 +160,10 @@ void process(int num,string*& own)
     }
     else if(num==5){
         count=true;
-        printf("Number of pricebond you want to check: ");
+        printf("You are checking for fifth prize\nNumber of pricebond you want to check: ");
         cin>>k;
         string *price=new string[k];
-        ifstream cin("files/input5.txt");
+        ifstream cin("E:/Prizebond/files/input5.txt");
             for(int i=0;i<k;i++){
                 
                 cin>>price[i];
@@ -180,6 +185,7 @@ void process(int num,string*& own)
             }    
             delete[] price; 
     }
+    
     else{
         cout<<"-----------404 error -------------\n-----------Type correct number-----------\n";
     }
@@ -187,8 +193,9 @@ void process(int num,string*& own)
 }
 int main()
 {
-    
+    system("cls");
     int num=0;
+    printf("\n\n\n\t\t\t\t\t====Welcome to the console base application====\n\n\n\n\n");
     printf("Number of pricebond you have: ");
     //cin>>ownNum;
     scanf("%d",&ownNum);
@@ -201,9 +208,16 @@ int main()
 
         //----for how many times I'm going to check----/
         cin>>num;
+        system("cls");
         if(num==0){ 
-            printf("Thanks for using our services :)\n");
+            printf("\n\n\n\t\t\t\t\t====Welcome to the console base application====\n\n\n\n\n");
+            printf("\t\t\t\t\t====Thanks for using our services :)====\n\n\n\n\n\n");
             break;
+        }
+        else if(num==6){
+            system("cls");
+            printf("\n\n\n\t\t\t\t\t====Welcome to the console base application====\n\n\n\n\n");
+            continue;
         }
         //---for sequencial prize winning--/
         process(num,own);
