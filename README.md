@@ -1,58 +1,64 @@
-# PrizeBond
-## This is a console base pogramme.
+# 🎉 PrizeBond Console Program
+
+## 📌 Overview
+This is a **console-based program** designed to check prize bond numbers efficiently.
 
 ---
 
-### **Instructions**
-> First we have to make 6 txt files and then we have to named it as own, input1,  
-input2, input3, input4, input5  
+## 📖 **Instructions**
 
-> own.txt file will contain our own prize bonds number  
-each line of every txt file contain 1 prizebond number
+### 📂 **File Setup**
+1. Create **six** text files:
+   - `own.txt`
+   - `input1.txt`
+   - `input2.txt`
+   - `input3.txt`
+   - `input4.txt`
+   - `input5.txt`
 
-> input1 file will contain 1st prize of 1 draw prizebond number  
-***note:*** here we can input more than 1 draw number.
+2. **File Contents:**
+   - `own.txt`: Contains your own prize bond numbers (one per line).
+   - `input1.txt`: Stores **1st prize** bond numbers from multiple draws.
+   - `input2.txt - input5.txt`: Store other prize categories.
 
-> we have to input prize bond number as well as ar input2, input3, input4, input5  
-***note:*** we can simple copy paste it from the pdf
+💡 **Tip:** You can copy-paste prize bond numbers directly from a PDF file.
 
+---
 
-### **Pogramme input display**
+## 🖥 **Program Input Display**
 ```
 ============================================
-|---------For Checking 1st Price Type 1----|
-|---------For Checking 2nd Price Type 2----|
-|---------For Checking 3rd Price Type 3----|
-|---------For Checking 4th Price Type 4----|
-|---------For Checking 5th Price Type 5----|
-|---------For Exit Type 0------------------|
+|---- For Checking 1st Prize, Type 1 ----|
+|---- For Checking 2nd Prize, Type 2 ----|
+|---- For Checking 3rd Prize, Type 3 ----|
+|---- For Checking 4th Prize, Type 4 ----|
+|---- For Checking 5th Prize, Type 5 ----|
+|---- For Exit, Type 0 -----------------|
 ============================================
 ```
-> If you enter 5  
-it will show 
 
-`Number of pricebond you want to check: `
-> If you enter 40  
-it will show desired answer 
-
-> If you enter 6 or any other unexpected umber  
-it will show
-
+### 🎯 **How It Works**
+✅ If you enter **5**, the program will prompt:
 ```
------------404 error -------------
------------Type correct number-----------
+Number of prize bonds you want to check: 
+```
+💡 **Example:** Enter `40`, and it will display the results accordingly.
+
+❌ If you enter an invalid number (e.g., `6`), it will show:
+```
+----------- 404 Error -------------
+----------- Type correct number -----------
 ```
 
-> If you enter 0  
-it will show
+🚪 If you enter `0`, it will display:
+```
+Thanks for using our services :)
+```
 
-`Thanks for using our services :)`
+🛑 **Note:** The program will continue running **until you press `0` to exit.**
 
-> This pogramme willn't stop untill anyone press 0 for exit
+---
 
-## _That's all about that pogramme Thanks you :)_
-
-
-
-
+## 🎯 **Final Words**
+_That’s all about the program! Thank you for using it! 🚀_
 
