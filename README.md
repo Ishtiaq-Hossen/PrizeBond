@@ -28,12 +28,12 @@ This is a **console-based program** designed to check prize bond numbers efficie
 ## 🖥 **Program Input Display**
 ```
 ============================================
-|---- For Checking 1st Prize, Type 1 ----|
-|---- For Checking 2nd Prize, Type 2 ----|
-|---- For Checking 3rd Prize, Type 3 ----|
-|---- For Checking 4th Prize, Type 4 ----|
-|---- For Checking 5th Prize, Type 5 ----|
-|---- For Exit, Type 0 -----------------|
+|---- For Checking 1st Prize, Type 1 ------|
+|---- For Checking 2nd Prize, Type 2 ------|
+|---- For Checking 3rd Prize, Type 3 ------|
+|---- For Checking 4th Prize, Type 4 ------|
+|---- For Checking 5th Prize, Type 5 ------|
+|-----------For Exit, Type 0 --------------|
 ============================================
 ```
 
